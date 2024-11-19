@@ -1,9 +1,10 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
-  background-image: url("https://i.namu.wiki/i/7Wc5p9D5RBJrWovOA_-aPNVE7YdY-TFSPL5sn05vi0Y1w4g5esnouINxSBrOdKkKooMpr-VV_uw5jEhQUY_Mnw.webp");
+  background-image: url("https://i.namu.wiki/i/XMEmeza5w0tdf7zKsdYQQayrXG4LgLHTm-uSxUQdTofOAOoNVoBvbeqUBLKm74jUj_BQxIbeWoOmJcO5WbtebA.webp");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   margin: 0;
   padding: 20px;
 }
