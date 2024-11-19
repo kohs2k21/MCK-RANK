@@ -1,0 +1,219 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  background-image: url("https://i.namu.wiki/i/7Wc5p9D5RBJrWovOA_-aPNVE7YdY-TFSPL5sn05vi0Y1w4g5esnouINxSBrOdKkKooMpr-VV_uw5jEhQUY_Mnw.webp");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #8b00ff
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbow 5s infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.tier {
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tier h2 {
+  margin: 0;
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  animation: colorChange 5s infinite;
+}
+
+.tier ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tier li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.tier li:last-child {
+  border-bottom: none;
+}
+
+@keyframes colorChangeRed {
+  0% {
+    background-color: #ff0000;
+  }
+  50% {
+    background-color: #ff6666;
+  }
+  100% {
+    background-color: #ff0000;
+  }
+}
+
+@keyframes colorChangeOrange {
+  0% {
+    background-color: #ff7f00;
+  }
+  50% {
+    background-color: #ffb366;
+  }
+  100% {
+    background-color: #ff7f00;
+  }
+}
+
+@keyframes colorChangeYellow {
+  0% {
+    background-color: #ffff00;
+  }
+  50% {
+    background-color: #ffff66;
+  }
+  100% {
+    background-color: #ffff00;
+  }
+}
+
+@keyframes colorChangeGreen {
+  0% {
+    background-color: #00ff00;
+  }
+  50% {
+    background-color: #66ff66;
+  }
+  100% {
+    background-color: #00ff00;
+  }
+}
+
+@keyframes colorChangeBlue {
+  0% {
+    background-color: #0000ff;
+  }
+  50% {
+    background-color: #6666ff;
+  }
+  100% {
+    background-color: #0000ff;
+  }
+}
+
+@keyframes colorChangeIndigo {
+  0% {
+    background-color: #4b0082;
+  }
+  50% {
+    background-color: #7f00b2;
+  }
+  100% {
+    background-color: #4b0082;
+  }
+}
+
+@keyframes colorChangeViolet {
+  0% {
+    background-color: #8b00ff;
+  }
+  50% {
+    background-color: #b266ff;
+  }
+  100% {
+    background-color: #8b00ff;
+  }
+}
+
+@keyframes colorChangePink {
+  0% {
+    background-color: #ee82ee;
+  }
+  50% {
+    background-color: #f3aaf3;
+  }
+  100% {
+    background-color: #ee82ee;
+  }
+}
+
+@keyframes colorChangeBrown {
+  0% {
+    background-color: #a52a2a;
+  }
+  50% {
+    background-color: #c06060;
+  }
+  100% {
+    background-color: #a52a2a;
+  }
+}
+
+.tier.s h2 {
+  animation: colorChangeRed 5s infinite;
+}
+
+.tier.a-plus h2 {
+  animation: colorChangeOrange 5s infinite;
+}
+
+.tier.a h2 {
+  animation: colorChangeYellow 5s infinite;
+}
+
+.tier.b-plus h2 {
+  animation: colorChangeGreen 5s infinite;
+}
+
+.tier.b h2 {
+  animation: colorChangeBlue 5s infinite;
+}
+
+.tier.c-plus h2 {
+  animation: colorChangeIndigo 5s infinite;
+}
+
+.tier.c h2 {
+  animation: colorChangeViolet 5s infinite;
+}
+
+.tier.d h2 {
+  animation: colorChangePink 5s infinite;
+}
+
+.tier.f h2 {
+  animation: colorChangeBrown 5s infinite;
+}
