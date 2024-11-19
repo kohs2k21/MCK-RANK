@@ -9,6 +9,22 @@ body {
   padding: 20px;
 }
 
+.switch-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.switch-button:hover {
+  background-color: #555;
+}
+
 h1 {
   text-align: center;
   font-size: 2.5em;
