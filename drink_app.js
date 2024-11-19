@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const tiers = {
     S: ["하은성"],
-    "A+": ["23최지민"],
-    A: ["이현ㄴ ㅏ"],
-    "B+": ["24터지민"],
+    "A+": [""],
+    A: [""],
+    "B+": [""],
     B: [""],
     "C+": [""],
     C: [""],
     D: [""],
-    F: ["이지은"],
+    F: [""],
   };
 
   const tiersContainer = document.getElementById("tiers");
