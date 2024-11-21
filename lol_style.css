@@ -17,6 +17,26 @@ img{
   padding: 10px 10px;
   border-radius: 50%;
 }
+.wrapper {
+  text-align: center;
+}
+
+.google-form-button{
+  margin:auto;
+  display:block;
+  padding: 20px 120px;
+  background-color: #ac8383;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'TheJamsil5Bold';
+  font-size: larger;
+}
+
+.google-form-button:hover {
+  background-color: #775656;
+}
 
 .switch-button {
   position: absolute;
