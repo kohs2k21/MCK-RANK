@@ -5,20 +5,31 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  margin: 0;
+  margin-top: 10px;
   padding: 20px;
+  font-family: 'TheJamsil5Bold';
+}
+
+img{
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  padding: 10px 10px;
+  border-radius: 50%;
 }
 
 .switch-button {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  padding: 10px 20px;
+  top: 10px;
+  right: 10px;
+  padding: 10px 10px;
   background-color: #333;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'TheJamsil5Bold';
+  font-size: large;
 }
 
 .switch-button:hover {
@@ -85,6 +96,8 @@ h1 {
 .tier li {
   padding: 10px 15px;
   border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: larger;
 }
 
 .tier li:last-child {
@@ -233,4 +246,11 @@ h1 {
 
 .tier.f h2 {
   animation: colorChangeBrown 5s infinite;
+}
+
+@font-face {
+  font-family: 'TheJamsil5Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }
