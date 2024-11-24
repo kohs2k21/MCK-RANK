@@ -1,0 +1,13 @@
+<h1>현재 점수</h1>
+<table>
+    <tr>
+        <th>이름</th>
+        <th>점수</th>
+    </tr>
+    {% for player in players %}
+    <tr>
+        <td>{{ player.name }}</td>
+        <td>{{ player.score }}</td>
+    </tr>
+    {% endfor %}
+</table>
