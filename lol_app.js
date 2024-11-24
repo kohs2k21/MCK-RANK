@@ -15,6 +15,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const players = {}; // 플레이어별 점수 데이터 저장
 
+  // 티어별 기본 점수
+  const tierScores = {
+    "S+": 320,
+    S: 280,
+    "A+": 240,
+    A: 200,
+    "B+": 160,
+    B: 120,
+    "C+": 80,
+    C: 40,
+    D: 0,
+    F: -40,
+  };
+
+  // 기존 티어 플레이어들에게 기본 점수 부여
+  function initializePlayerScores() {
+    for (const [tier, playerList] of Object.entries(tiers)) {
+      const baseScore = tierScores[tier] || 0; // 티어에 따른 기본 점수
+      playerList.forEach((playerName) => {
+        if (playerName) {
+          players[playerName] = baseScore;
+        }
+      });
+    }
+  }
+
+  initializePlayerScores(); // 기존 플레이어 점수 초기화
+
   const tiersContainer = document.getElementById("tiers");
 
   // 기존 티어 렌더링
@@ -35,7 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const tierList = document.createElement("ul");
       items.forEach((item) => {
         const listItem = document.createElement("li");
-        listItem.textContent = item;
+        const score = players[item] || 0; // 플레이어 점수 표시
+        listItem.textContent = `${item} (점수: ${score})`;
         tierList.appendChild(listItem);
       });
 
@@ -91,10 +120,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // 플레이어 데이터 업데이트 및 티어 갱신
   function updatePlayerTier(playerName, score) {
     // 기존 티어에서 플레이어 제거
-    for (const [tier, players] of Object.entries(tiers)) {
-      const index = players.indexOf(playerName);
+    for (const [tier, playerList] of Object.entries(tiers)) {
+      const index = playerList.indexOf(playerName);
       if (index !== -1) {
-        players.splice(index, 1);
+        playerList.splice(index, 1);
         break;
       }
     }
@@ -113,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("tier-form").addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const playerName = document.getElementById("player-name").value;
+    const playerName = document.getElementById("player-name").value.trim();
     const kda = parseFloat(document.getElementById("kda").value);
     const result = document.getElementById("result").value;
 
