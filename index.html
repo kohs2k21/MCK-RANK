@@ -7,17 +7,50 @@
     <link rel="stylesheet" href="lol_style.css" />
   </head>
   <body>
+    <!-- 상단 버튼 -->
     <button class="switch-button" onclick="location.href='drink_index.html'">
       술멱성 티어표로 이동
     </button>
-    <img src="https://yt3.googleusercontent.com/kzk_VRd9chMvmRqYgQtXr7jpaubaz_e0N3oRRiREKDDobF2y6BCMPwx8sRe5NpBpCsLYrPn9Zw=s900-c-k-c0x00ffffff-no-rj" alt="목멱성" width = "50"/>
+    <img
+      src="https://yt3.googleusercontent.com/kzk_VRd9chMvmRqYgQtXr7jpaubaz_e0N3oRRiREKDDobF2y6BCMPwx8sRe5NpBpCsLYrPn9Zw=s900-c-k-c0x00ffffff-no-rj"
+      alt="목멱성"
+      width="50"
+    />
     <h1>롤멱성 티어표</h1>
+
+    <!-- 점수 입력 폼 -->
+    <div class="form-container">
+      <form id="tier-form">
+        <label for="player-name">플레이어 이름:</label>
+        <input type="text" id="player-name" placeholder="이름을 입력하세요" required />
+
+        <label for="kda">KDA:</label>
+        <input type="number" id="kda" step="0.1" placeholder="KDA를 입력하세요" required />
+
+        <label for="result">승리 여부:</label>
+        <select id="result">
+          <option value="win">승리</option>
+          <option value="lose">패배</option>
+        </select>
+
+        <button type="submit">점수 계산</button>
+      </form>
+    </div>
+
+    <!-- 티어 목록 -->
     <div id="tiers"></div>
-    <script src="lol_app.js"></script>
+
+    <!-- 수정 의견 버튼 -->
     <div class="wrapper">
-      <button class="google-form-button" onclick="location.href='https://forms.gle/ELSYy6GGGctZpBNCA'">
+      <button
+        class="google-form-button"
+        onclick="location.href='https://forms.gle/ELSYy6GGGctZpBNCA'"
+      >
         티어 배치 수정 의견 제출하기
       </button>
     </div>
+
+    <!-- JavaScript 연결 -->
+    <script src="lol_app.js"></script>
   </body>
 </html>
