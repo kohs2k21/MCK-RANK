@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const baseScore = tierScores[tier] || 0; // 티어에 따른 기본 점수
       playerList.forEach((playerName) => {
         if (playerName) {
-          players[playerName] = baseScore;
+          players[playerName] = baseScore; // 기본 점수 설정
         }
       });
     }
